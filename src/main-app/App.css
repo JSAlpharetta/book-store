@@ -9,14 +9,16 @@
 
 .App-header {
   background-color: #222;
-  height: 70px;
-  padding: 20px;
+  height: 100px;
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .App-title {
   font-size: 1.5em;
+  padding: 20px;
 }
 
 .App-intro {
@@ -34,11 +36,15 @@
   border: 1px solid #ebebeb;
 }
 
-.new-book-form label {
-  font-weight: bold;
-}
-
-.new-book-form button {
+.form-button {
   background: #222;
   color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+TextBox {
+  margin-bottom: 5px;
 }
