@@ -66,7 +66,7 @@ class App extends Component {
       <div>
         <header className="App-header">
           <img src={JSAlpharetta} height="100" width="150" alt="jsAlpharetta" />
-          <h1 className="App-title">JS Alpharetta Book Store</h1>
+          <h1 className="App-title">AlpharettaJS Bookstore</h1>
         </header>
         <h2>Add New Book</h2>
         <div className="new-book-form">
