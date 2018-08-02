@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import JSAlpharetta from "../assets/JSAlpharetta.jpg";
 
-import books from "../data/books";
+import initialBooks from "../data/books";
 import TextBox from "../components/text-box/text-box";
 import BookList from "../components/book-list/book-list";
 
@@ -12,7 +12,7 @@ class App extends Component {
     newBookTitle: "",
     newBookIsbn: "",
     newBookAuthor: "",
-    books: books
+    books: initialBooks,
   };
 
   // method to handle the change of text within textbox for new book title
@@ -50,11 +50,11 @@ class App extends Component {
       author: this.state.newBookAuthor
     };
 
-    books.push(book);
+    const books = [...this.state.books, book];
 
     // clear out current values for author, isbn, and title and set books array to data/books.js with the new values added
     this.setState({
-      books: books,
+      books,
       newBookAuthor: "",
       newBookIsbn: "",
       newBookTitle: ""
@@ -88,7 +88,7 @@ class App extends Component {
           <button onClick={this.handleOnSubmit} className="form-button">Add Book</button>
         </div>
         <h2>Book List</h2>
-        <BookList books={books} />
+        <BookList books={this.state.books} />
       </div>
     );
   }
